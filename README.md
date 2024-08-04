@@ -11,9 +11,9 @@ The project demonstrates the functionality through simple scripts (admin.js, pro
 Note: You can create multiple `Consumer Groups` and in them you may create multple `consumers`
 
 ## Project Overview
-- Admin (admin.js): Manages the setup of infrastructure, topics, and partitions in Kafka Server.
-- Producer (producer.js): Produces messages to the Kafka topic rider-updates.
-- Consumer (consumer.js): Consumes messages from the Kafka topic.
+- Admin `(admin.js)`: Manages the setup of infrastructure, topics, and partitions in Kafka Server.
+- Producer `(producer.js)`: Produces messages to the Kafka topic rider-updates.
+- Consumer `(consumer.js)`: Consumes messages from the Kafka topic.
 
 
 ## Project Setup
