@@ -1,5 +1,8 @@
 # kafka-local-tutorial
-Kafka Tutorial on Local Machine. 
+## Description
+This repository provides a comprehensive guide on setting up a local Kafka environment using Docker, Yarn, and Node.js (`kafkajs`). It includes detailed instructions for configuring Zookeeper, Kafka, and creating a basic Kafka setup with one producer, one topic named rider-updates with two partitions, and multiple consumer groups.
+
+The project demonstrates the functionality through simple scripts (admin.js, producer.js, consumer.js) to manage topics and partitions, produce messages, and consume messages respectively. The tutorial aims to help beginners get hands-on experience with Kafka in a local development setup.
 
 ## About Kafka's Config
 - One Producer
@@ -7,12 +10,11 @@ Kafka Tutorial on Local Machine.
 - Two Partitions `0: NORTH and 1: SOUTH`
 Note: You can create multiple `Consumer Groups` and in them you may create multple `consumers`
 
-## Responsibilites of the files:
-```
-- Admin (admin.js) -> Setup of Infra, manage Topics and Partitions in Kafka Server
-- Producer (producer.js) -> Produces messages
-- Consumer (consumer.js) -> Consumes messages
-```
+## Project Overview
+- Admin (admin.js): Manages the setup of infrastructure, topics, and partitions in Kafka Server.
+- Producer (producer.js): Produces messages to the Kafka topic rider-updates.
+- Consumer (consumer.js): Consumes messages from the Kafka topic.
+
 
 ## Project Setup
 1. Install Yarn, Node and Docker
@@ -29,6 +31,8 @@ docker run -p 9092:9092 -e KAFKA_ZOOKEEPER_CONNECT=<PRIVATE_IP>:2181 -e KAFKA_AD
 - To make a consumer group, run `node consumer.js user-1` in one terminal
 - To start producer, run `node producer.js` in other terminal
 - Now, we have 1 Producer and 1 Consumer Group (or 1 consumer)
-9. In producer terminal, try out the this:
+
+## Example Usage
+In the producer terminal:
 - Type `iron-man north` and press `Enter`, in consumer logs, you will see `user-1: [rider-updates]: PART: 0 {"name":"iron-man","location":"north"}`
 - Type `iron-man south` and press `Enter`, in consumer logs, you will see `user-1: [rider-updates]: PART: 1 {"name":"iron-man","location":"south"}`
