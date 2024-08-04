@@ -21,7 +21,7 @@ Note: You can create multiple `Consumer Groups` and in them you may create multp
 4. Install kafkajs: `yarn add kafkajs`
 5. Intall yarn and run: sudo yarn add
 6. Start Zookeper Container and expose PORT 2181: `docker run -p 2181:2181 zookeeper`
-7. Start Kafka Container, expose PORT 9092 and setup ENV variables. Replace <PRIVATE_IP> with your local machine's IP
+7. Start Kafka Container, expose PORT 9092 and setup ENV variables. Replace `<PRIVATE_IP>` with your local machine's IP
 ```
 docker run -p 9092:9092 -e KAFKA_ZOOKEEPER_CONNECT=<PRIVATE_IP>:2181 -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://<PRIVATE_IP>:9092 -e KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1 confluentinc/cp-kafka
 ```
