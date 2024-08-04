@@ -33,5 +33,11 @@ docker run -p 9092:9092 -e KAFKA_ZOOKEEPER_CONNECT=<PRIVATE_IP>:2181 -e KAFKA_AD
 
 ## Example Usage
 In the producer terminal:
-- Type `iron-man north` and press `Enter`, in consumer logs, you will see `user-1: [rider-updates]: PART: 0 {"name":"iron-man","location":"north"}`
-- Type `iron-man south` and press `Enter`, in consumer logs, you will see `user-1: [rider-updates]: PART: 1 {"name":"iron-man","location":"south"}`
+- Type `iron-man north` and press `Enter`, in consumer logs, you will see
+```
+user-1: [rider-updates]: PART: 0 {"name":"iron-man","location":"north"}
+```
+- Type `iron-man south` and press `Enter`, in consumer logs, you will see
+```
+user-1: [rider-updates]: PART: 1 {"name":"iron-man","location":"south"}
+```
