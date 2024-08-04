@@ -21,13 +21,12 @@ Note: You can create multiple `Consumer Groups` and in them you may create multp
 2. Make a new directory and go inside it.
 3. Initialise yarn: `yarn init` and press `Enter` multiple times.
 4. Install kafkajs: `yarn add kafkajs`
-5. Intall yarn and run: sudo yarn add
-6. Start Zookeper Container and expose PORT 2181: `docker run -p 2181:2181 zookeeper`
-7. Start Kafka Container, expose PORT 9092 and setup ENV variables. Replace `<PRIVATE_IP>` with your local machine's IP
+5. Start Zookeper Container and expose PORT 2181: `docker run -p 2181:2181 zookeeper`
+6. Start Kafka Container, expose PORT 9092 and setup ENV variables. Replace `<PRIVATE_IP>` with your local machine's IP
 ```
 docker run -p 9092:9092 -e KAFKA_ZOOKEEPER_CONNECT=<PRIVATE_IP>:2181 -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://<PRIVATE_IP>:9092 -e KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1 confluentinc/cp-kafka
 ```
-8. Open two terminal tabs
+7. Open two terminal tabs
 - To make a consumer group, run `node consumer.js user-1` in one terminal
 - To start producer, run `node producer.js` in other terminal
 - Now, we have 1 Producer and 1 Consumer Group (or 1 consumer)
